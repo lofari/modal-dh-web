@@ -159,6 +159,10 @@ body {
     padding-left: 20px;
 }
 
+.form-content{
+    margin: auto;
+}
+
 .form p {
     font-size: 0.9em;
     padding-left: 15px;
