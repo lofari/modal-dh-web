@@ -71,7 +71,6 @@ body {
 #submit-btn{
     background-color: #d0103a;
     position: relative;
-    bottom: 0;
     left: 0;
     width: 91%;
     margin-top: 8%;
@@ -316,6 +315,9 @@ input{
     #submit-btn{
         border-radius: 0;
         width: 100%;
+        position: relative;
+        bottom: 0;
+
         
     }
 
