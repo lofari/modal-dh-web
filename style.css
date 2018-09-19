@@ -35,7 +35,7 @@ body {
     /* le baje el width de 70 a 65 */
     width: 65%; 
     /* le puse un height de 60% */
-    height: 80%;
+    /*height: 80%; */
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
     animation-duration: 1s;
@@ -44,8 +44,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-height: 80%;  
-    
+    min-height: 55%;
         
 }
 
@@ -53,6 +52,11 @@ body {
     color: #ccc;
     float: right;
     font-size: 30px;
+    position: relative;
+    top: -15%;
+    right: -4%;
+    background-color: transparent;
+    border:none;
     
 
 }
@@ -66,7 +70,7 @@ body {
 
 #submit-btn{
     background-color: #d0103a;
-    position: relative 
+    position: relative;
     bottom: 0;
     left: 0;
     width: 90%;
@@ -76,11 +80,11 @@ body {
     background-color: #052230;
     width: 100%;
     /* le agregue height porq sino cambiar el tamaniio de la letra del h2 rompia el layout del form y info */
-    height: 23%;
+    height: 120px;
     color: white;
     border-radius: 8px 8px 0 0;
-    
 }
+
 .modal-header h2{
     margin: 0;
     /* padding para alinear el texto con la base del icono */
@@ -105,7 +109,7 @@ body {
 
 .modal-body{
     /* le agregue el height 70% para q ocupe bien todo el tamanio nuevo del header */
-    height: 70%;
+     /* height: 70%; */
     display: flex;
     flex-wrap: wrap;
     flex-flow: row;
@@ -115,7 +119,7 @@ body {
 .info{
     font-size: 0.8em;
     width: 50%;
-    /* te inverti el padding a right en vez de left porq te descentraba las cosas */
+    /* te inverti el padding a right en vez de left porq descentraba las cosas */
     padding-right: 20px;  
 }
 
@@ -146,7 +150,6 @@ body {
 .form {
     display: flex;
     flex-flow: column;
-    justify-content: flext-start;
     align-items: center;
     width: 50%;
     padding-left: 20px;
