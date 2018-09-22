@@ -1,16 +1,13 @@
 
 var modal = document.getElementById('simpleModal');
-
 var modalBtn = document.getElementById('modalBtn');
-
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
-
 var continueBtn = document.getElementsByClassName('continue')[0];
-
-var infoTab = document.getElementsByClassName('info');
-
-var formTab = document.getElementsByClassName('form');
-
+var info = document.getElementsByClassName('info')[0];
+var form = document.getElementsByClassName('form')[0];
+var tabNav = document.getElementsByClassName('tabNav')[0];
+var infoTab = document.getElementsByClassName('info-tab')[0];
+var inscripcionTab = document.getElementsByClassName('inscripcion-tab')[0];
 // open click
 modalBtn.addEventListener('click', openModal);
 
@@ -19,9 +16,10 @@ closeBtn.addEventListener('click', closeModal);
 
 continueBtn.addEventListener('click', continuar);
 
+infoTab.addEventListener('click', handleTabClick);
+inscripcionTab.addEventListener('click', handleTabClick);
 //outside click
 window.addEventListener('click', outsideClick);
-
 //function
 function openModal() {
     modal.style.display = 'block';
@@ -35,19 +33,34 @@ function outsideClick(e) {
     if (e.target == modal) {
         modal.style.display = 'none';
     }
-
 }
 
 function continuar() {
-    infoTab.style.opacity = 0;
+    info.style.opacity = 0;
     setTimeout(function(){
-        infoTab.style.display = 'none';
-        formTab.style.opacity = 100;
-        formTab.style.display = 'inline-block';
+        info.style.display = 'none';
+        form.style.opacity = 100;
+        form.style.display = 'inline-block';
+        infoTab.classList.remove("active-tab");
+        inscripcionTab.classList.add("active-tab");
+
     }, 400);
-
-
 }
+
+function handleTabClick(){
+
+    if (inscripcionTab.classList.contains("active-tab")){
+        setTimeout(function(){
+            info.style.display = 'none';
+            form.style.opacity = 100;
+            form.style.display = 'inline-block';
+            infoTab.classList.remove("active-tab");
+            inscripcionTab.classList.add("active-tab");
+    
+        }, 400);
+    }
+
+} 
 
 
 
