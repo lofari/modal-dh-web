@@ -7,7 +7,7 @@ var info = document.getElementsByClassName('info')[0];
 var form = document.getElementsByClassName('form')[0];
 var tabNav = document.getElementsByClassName('tabNav')[0];
 var infoTab = document.getElementsByClassName('info-tab')[0];
-var inscripcionTab = document.getElementsByClassName('inscripcion-tab')[0];
+var formTab = document.getElementsByClassName('inscripcion-tab')[0];
 // open click
 modalBtn.addEventListener('click', openModal);
 
@@ -17,7 +17,7 @@ closeBtn.addEventListener('click', closeModal);
 continueBtn.addEventListener('click', continuar);
 
 infoTab.addEventListener('click', handleTabClick);
-inscripcionTab.addEventListener('click', handleTabClick);
+formTab.addEventListener('click', handleTabClick);
 //outside click
 window.addEventListener('click', outsideClick);
 //function
@@ -42,24 +42,29 @@ function continuar() {
         form.style.opacity = 100;
         form.style.display = 'inline-block';
         infoTab.classList.remove("active-tab");
-        inscripcionTab.classList.add("active-tab");
+        formTab.classList.add("active-tab");
+
+    }, 400);
+}
+
+function changeActive(nextContent, prevContent, nextTab, prevTab) {
+    prevContent.style.opacity = 0;
+    setTimeout(function () {
+        prevContent.style.display = 'none';
+        nextContent.style.opacity = 100;
+        nextContent.style.display = 'inline-block';
+        prevTab.classList.remove("active-tab");
+        nextTab.classList.add("active-tab");
 
     }, 400);
 }
 
 function handleTabClick(){
-
-    if (inscripcionTab.classList.contains("active-tab")){
-        setTimeout(function(){
-            info.style.display = 'none';
-            form.style.opacity = 100;
-            form.style.display = 'inline-block';
-            infoTab.classList.remove("active-tab");
-            inscripcionTab.classList.add("active-tab");
-    
-        }, 400);
+    if (formTab.classList.contains("active-tab")){
+       changeActive(info, form, infoTab, formTab);
+    } else {
+       changeActive(form, info, formTab, infoTab);
     }
-
 } 
 
 
