@@ -8,6 +8,8 @@ var form = document.getElementsByClassName('form')[0];
 var tabNav = document.getElementsByClassName('tabNav')[0];
 var infoTab = document.getElementsByClassName('info-tab')[0];
 var formTab = document.getElementsByClassName('inscripcion-tab')[0];
+var submitMobile = document.getElementsByClassName('submit-mobile')[0];
+
 // open click
 modalBtn.addEventListener('click', openModal);
 
@@ -15,6 +17,7 @@ modalBtn.addEventListener('click', openModal);
 closeBtn.addEventListener('click', closeModal);
 
 continueBtn.addEventListener('click', continuar);
+submitMobile.addEventListener('click', submit);
 
 infoTab.addEventListener('click', handleTabClick);
 formTab.addEventListener('click', handleTabClick);
@@ -43,7 +46,7 @@ function continuar() {
         form.style.display = 'inline-block';
         infoTab.classList.remove("active-tab");
         formTab.classList.add("active-tab");
-
+        submitMobile.style.display = 'inline-block';
     }, 400);
 }
 
@@ -62,10 +65,17 @@ function changeActive(nextContent, prevContent, nextTab, prevTab) {
 function handleTabClick(){
     if (formTab.classList.contains("active-tab")){
        changeActive(info, form, infoTab, formTab);
+       submitMobile.style.display = 'none';
+
     } else {
        changeActive(form, info, formTab, infoTab);
+       submitMobile.style.display = 'inline-block';
     }
 } 
+
+function submit(){
+    console.log("ponele que se mando algo...");
+}
 
 
 
