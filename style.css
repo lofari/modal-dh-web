@@ -1,6 +1,6 @@
 body {
     font-family: 'Source Sans Pro', sans-serif; /*Arial, Helvetica, sans-serif;*/ 
-    font-size: 17px;
+    font-size: 1.0625rem;
     line-height:1.6;
 }
 
@@ -95,6 +95,10 @@ body {
     font-size: 1rem;
 }
 
+.tabNav {
+     display: none;
+}
+
 .fa-desktop {
     font-size: 4em;
     float: left;
@@ -142,7 +146,7 @@ body {
 }
 
 
-.info p {
+.horarios {
     /* un poco mas de espacio entre renglones */
     line-height: 1.2rem;
     
@@ -220,4 +224,90 @@ input{
     from{opacity: 0}
     to{opacity: 1}
 }
+
+   @media only screen and (max-width: 480px) {
+
+    .modal {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .closeBtn {
+        right: 0;
+        top: 0;
+    }
+
+    .modal-header {
+        height: 15%;
+    }
+
+    .modal-header h2 {
+        padding: 6px;
+        margin: auto;
+        text-align: center; 
+    }
+
+    .modal-header i {
+        display: none;
+    }
+    .modal-body{
+        flex-flow: column;
+        padding-top: 0;
+        height: 100%;
+    }
+    
+    .form{
+        display: none;
+    }
+    .info {
+        width: 100%;
+    }
+
+    .horarios {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        margin: 0;
+        margin-bottom: 5%;
+    }
+
+    .header-horarios{
+        font-size: 1.7rem;
+        margin-bottom: 0;
+        margin-top: 2%;
+    }
+
+    .matricula {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .curso {
+        margin-bottom: 5%;
+    }
+    .hide{
+        display: none;
+    }
+
+    .tabNav{
+        display: block;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .info-tab{
+        border-bottom: 2px solid #052230;
+         
+        display: inline-block;
+        width: 50%;
+    }
+    .inscripcion-tab {
+        display: inline-block;
+        width: 49%;
+    }
+    #submit-btn{
+        border-radius: 0;
+        width: 100%;
+    }
+       
+   }
 

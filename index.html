@@ -8,96 +8,106 @@
     <title>Modal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <button id="modalBtn" class="button">Click Here</button>
-    
+
     <div id="simpleModal" class="modal-overlay">
         <div class="modal">
             <div class="modal-header">
                 <button aria-label="Close Modal" class="closeBtn">&times;</button>
                 <i class="fas fa-desktop"></i>
-                <h2>Inscripción al curso de <br><span id="big">Dessarrollo Web Full Stack</span> </h2>
+                <h2><span class="hide"> Inscripción al curso de</span> <br><span id="big">Dessarrollo Web Full Stack</span> </h2>
             </div>
             <div class="modal-body">
+                <div class="tabNav">
+                    <div class="info-tab">
+                         <p>1.MÁS INFORMACIÓN</p>
+                    </div>
+                    <div class="inscripcion-tab">
+                        <p>2.INSCRIPCIÓN</p>
+                    </div>
+                </div>
+
                 <div class="info">
-                    <p><strong>Dessarrollo Web Full Stack</strong> <span class="detail-soft"> <br>Lunes, Miércoles y viernes
+                    <h2 class="header-horarios"> <strong>Dessarrollo Web Full Stack</strong> </h2>
+                    <p class="horarios"> Lunes, Miércoles y viernes
                         -- 18:30 a 22:00 hs. <br> Inicial el 10/07/2018 -- Finaliza el 23/11/2018 <br> Sede Belgrano
                         (Monroe 860, CABA)
-                    </span>
-                </p>
-                <div class="promo">
-                    <h3>PROMO JUNIO</h3>
-                    <p>75%OFF + 12 cuotas sin interés</p>
-                </div>
-                <div class="detail">
-                    <div class="detail-soft matricula">
-                        <p>
-                            MATRICULA
-                            
-                            <span class="pull-right">
-                                <span class="green">
-                                    75% OFF
-                                </span>
-                                <span class="crossed">
-                                    $10.000
-                                </span>
-                                <span class="discounted-price">
-                                    $3500*
-                                </span>
-                            </span>
-                        </p>
+
+                    </p>
+                    <div class="promo">
+                        <h3>PROMO JUNIO</h3>
+                        <p>75%OFF + 12 cuotas sin interés</p>
                     </div>
-                    <div class="detail-soft curso">
-                        <p>
-                            CURSO
-                            
-                            <span class="pull-right">
-                                <span class="green">
-                                    30% OFF
-                                </span>
-                                12 cuotas fijas de
-                                <span class="crossed">
-                                    $5.208
-                                </span>
-                                <span class="discounted-price">
-                                    $4.167*
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                    <div class="detail-strong">
-                        <p>
-                            <strong>
-                                PRECIO FINAL
+                    <div class="detail">
+                        <div class="detail-soft matricula">
+                            <p>
+                                MATRICULA
+
                                 <span class="pull-right">
-                                    $53.504
+                                    <span class="green">
+                                        75% OFF
+                                    </span>
+                                    <span class="crossed">
+                                        $10.000
+                                    </span>
+                                    <span class="discounted-price">
+                                        $3500*
+                                    </span>
                                 </span>
-                            </strong>
-                        </p>
+                            </p>
+                        </div>
+                        <div class="detail-soft curso">
+                            <p>
+                                CURSO
+
+                                <span class="pull-right">
+                                    <span class="green">
+                                        30% OFF
+                                    </span>
+                                    12 cuotas fijas de
+                                    <span class="crossed">
+                                        $5.208
+                                    </span>
+                                    <span class="discounted-price">
+                                        $4.167*
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="detail-strong">
+                            <p>
+                                <strong>
+                                    PRECIO FINAL
+                                    <span class="pull-right">
+                                        $53.504
+                                    </span>
+                                </strong>
+                            </p>
+                        </div>
                     </div>
+
                 </div>
-                
+                <div class="form">
+                    <p>Por favor, dejanos tus datos y te contactaremos a la brevedad </p>
+                    <form method="post">
+                        <input type="text" placeholder="Ingresá tu nombre completo">
+                        <input type="email" placeholder="Ingresá tu direccion de E-mail">
+                        <input type="text" placeholder="Ingresá tu numero de celular">
+                        <button class="button" id="submit-btn">QUIERO QUE ME CONTACTEN</button>
+                    </form>
+
+                </div>
             </div>
-            <div class="form">
-                <p>Por favor, dejanos tus datos y te contactaremos a la brevedad </p>
-                <form method="post">
-                    <input type="text" placeholder="Ingresá tu nombre completo">
-                    <input type="email" placeholder="Ingresá tu direccion de E-mail">
-                    <input type="text" placeholder="Ingresá tu numero de celular">
-                    <button class="button" id="submit-btn">QUIERO QUE ME CONTACTEN</button>
-                </form>
-                
-            </div>
+
         </div>
-        
     </div>
-</div>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
